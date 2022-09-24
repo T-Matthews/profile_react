@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  width: auto;
+  color: rgb(186, 186, 186);
+  padding:0;
+}
+/* ////// */
+/* NAVBAR */
+/* ////// */
+.navbar {
+  height: 45px;
+  padding:0px;
+  
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1.3fr; 
+  grid-template-rows: 1fr; 
+  gap: 0em 0px; 
+  grid-template-areas: 
+    "navbar-left navbar-right"; 
+  width: 100%; 
+}
+.navbar-left {
+  grid-area: navbar-left;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+
+}
+#nav-name{
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.navbar-right {
+  grid-area: navbar-right;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content:space-around;
+  
+}
+.nav-item{
+  color: white;
+  text-decoration: none;
+}
+
+/* Individual underline effect in navbar */
+.nav-item-r{
+
+  padding-bottom: 0; /*space betweent text and underline*/
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+}
+.nav-item:hover{
+  color: white;
+}
+.nav-item-r::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height:2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, #9b9b9b, #ffffff 100%);
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.15s;
+}
+
+.nav-item-r:hover::before{
+  visibility: visible;
+  width: 100%;
+}
+
+/* Underline for right side of nav bar */
+.underline{
+  height: 2px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.underline-l{
+width: 45%;
+height: 100%;
+}
+.underline-r{
+width: 55%;
+height: 100%;
+background: radial-gradient(white, white, #282c34 70%)
+}
