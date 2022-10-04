@@ -94,3 +94,97 @@ width: 55%;
 height: 100%;
 background: radial-gradient(white, white, #282c34 70%)
 }
+
+
+
+/* ////// */
+/* BANNER */
+/* ////// */
+
+#banner{
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: row;
+  padding-left:10vh;
+  padding-right:10vh;
+  margin-bottom: 8vh;
+}
+.banner-text-area{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  
+}
+.banner-text-blank{
+  height: 6.5vw;
+}
+.banner-text-space{
+  border: rgb(225, 225, 225) ridge 3px;
+  height: 100%;
+  border-radius: 5vh;
+  border-spacing: 3vh;
+}
+.banner-text{
+  overflow: hidden;
+  color: rgb(225, 225, 225);
+  padding-left: 2vh;
+  padding-right: 2vh;
+  font-size: 1.2vw;
+}
+
+.banner-image{
+  margin-right: 2vh;
+  background-image: url("../static/bannerbackground.png");
+  background-repeat: no-repeat;
+  background-size:100% 125%;
+  height: auto;
+  width: 50%;
+}
+
+#profile-pic{
+  margin-top: 5vw;
+  border: white solid 3px;
+  height: auto;
+  width: 60%;
+  border-radius: 5vh;
+}
+
+.underline-center{
+  height: 2px;
+  width: 100%;
+  background: radial-gradient(white, white, #282c34 65%);
+  background-position: center;
+  padding-left: 17.5%;
+}
+
+/* /////// */
+/*  LINKS  */
+/* /////// */
+
+.links{
+  height: 20vh;
+  border: orange 2px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  
+}
+.links-margin{
+  max-width: 20vh;
+  min-width: 3vh;
+  width: auto;
+
+}
+.links-area{
+  border: cyan 2px solid;
+  width:30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+.pro-link{
+  border: greenyellow 2px solid;
+}
