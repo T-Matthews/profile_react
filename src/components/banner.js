@@ -18,9 +18,9 @@ let Banner = () =>{
                             to continue learning, improving, and making the web a better 
                             place.
                         </h4>
-                        <h4 className="banner-text">Through previous endevors I have developed an organized and 
+                        <h4 className="banner-text">Through previous endeavors I have developed an organized and 
                             proactive approach to my work. I really enjoy working with others
-                            and am always trying to optimize and improve my applications.
+                            and always aim to optimize and improve my applications.
                         </h4>
                         <h4 className="banner-text">Outside of development, I love playing/watching sports,
                             traveling, and board-game night. I play trombone, guitar and piano, and can't wait for the 
