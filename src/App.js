@@ -7,7 +7,7 @@ import Hobbies from './views (pages)/Hobbies';
 import Previous from './views (pages)/Previous';
 import Projects from './views (pages)/Projects';
 import { Routes,Route } from 'react-router-dom';
-import Navbar2 from './components/navbar2';
+
 
 
 
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar2/>
+      <Navbar/>
       <Routes>
         <Route children path='/' element={<Home/>}/>
         <Route children path='/contact' element={<Contact/>}/>
