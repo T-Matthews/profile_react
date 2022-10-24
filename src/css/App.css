@@ -6,56 +6,56 @@
   color: rgb(186, 186, 186);
   padding:0;
 }
+.buffer{
+  width: 100%;
+  height: 200px;
+}
 /* ////// */
 /* NAVBAR */
 /* ////// */
 .navbar {
-  height: 45px;
-  padding:0px;
-  
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr 1.3fr; 
-  grid-template-rows: 1fr; 
-  gap: 0em 0px; 
-  grid-template-areas: 
-    "navbar-left navbar-right"; 
-  width: 100%; 
+  height: auto;
+  padding:0 1rem;
+
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
 }
 .navbar-left {
-  grid-area: navbar-left;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
-
+  width: 55%
 }
 #nav-name{
   font-size: 30px;
   font-weight: 400;
 }
-
-.navbar-right {
-  grid-area: navbar-right;
-  display: flex;
-  flex-direction: row;
-  align-content: flex-end;
-  justify-content:space-around;
+.navbar-right-list {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
   
 }
 .nav-item{
   color: white;
   text-decoration: none;
+  white-space: nowrap;
+}
+.navicon{
+  visibility: hidden;
 }
 
 /* Individual underline effect in navbar */
 .nav-item-r{
-
-  padding-bottom: 0; /*space betweent text and underline*/
+  margin: 0 2vw;
+  padding: 0; /*bottom padding =space betweent text and underline*/
   font-weight: 300;
   line-height: 1.4;
   position: relative;
-  display: inline-block;
 }
 .nav-item:hover{
   color: white;
@@ -72,13 +72,83 @@
   visibility: hidden;
   transition: all 0.15s;
 }
-
 .nav-item-r:hover::before{
   visibility: visible;
   width: 100%;
 }
 
-/* Underline for right side of nav bar */
+/*/////////////*/
+/*NAVBAR MOBILE*/
+/*/////////////*/
+@media all and (max-width: 720px) {
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:0px;
+    
+  }
+  .navbar-left{
+    width: 100%;
+    padding: 0;
+  }
+  .navbar-right-open{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar-right-closed{
+    height: 0;
+    visibility: hidden;
+  }
+  .VertNav{
+    visibility: visible;
+    height: auto;
+    z-index:1;
+  }
+  .navbar-right-list{
+    flex-direction: column;
+    text-align: center;
+    padding:2vh;
+    justify-content: center;
+  }
+  .nav-item{
+    padding: 0.5vh;
+    font-size: 1.4rem;
+  }
+ 
+  /* Mobile Hamburger/X icons */
+  .navicon{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    visibility: visible;
+    position: absolute;
+    top:1.1rem;
+    right:1.4rem;
+  }
+  /*underline on center of mobile dropdown*/
+  .underline{
+    height: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .underline-l{
+  width: 25%;
+  height: 100%;
+  }
+  .underline-r{
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(white, white, #282c34 70%)
+  }
+}
+
+/*////////////*/
+/*NAVBAR LARGE*/
+/*////////////*/
+@media all and (min-width: 721px) {
+
+/* Underline for nav on right of large screens */
 .underline{
   height: 2px;
   width: 100%;
@@ -86,16 +156,19 @@
   flex-direction: row;
 }
 .underline-l{
-width: 45%;
+width: 56%;
 height: 100%;
 }
 .underline-r{
-width: 55%;
+width: 44%;
 height: 100%;
 background: radial-gradient(white, white, #282c34 70%)
 }
-
-
+.navbar-right{
+  width: 45%;
+    padding-right: min(15px);
+}
+}
 
 /* ////// */
 /* BANNER */
@@ -103,7 +176,7 @@ background: radial-gradient(white, white, #282c34 70%)
 
 #banner{
   width: 100%;
-  height: 45vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   padding-left:10vh;
