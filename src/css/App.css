@@ -15,9 +15,10 @@
 /* ////// */
 .navbar {
   height: auto;
-  padding:0 1rem;
-
+  padding:0;
   display: flex; 
+  flex: 0 0 auto;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
@@ -27,7 +28,10 @@
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  width: 55%
+  width: 45%;
+}
+.navbar-right{
+width: 35%;
 }
 #nav-name{
   font-size: 30px;
@@ -35,9 +39,11 @@
 }
 .navbar-right-list {
   display: flex; 
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  padding-left: 0;
   
 }
 .nav-item{
@@ -147,7 +153,9 @@
 /*NAVBAR LARGE*/
 /*////////////*/
 @media all and (min-width: 721px) {
-
+.navbar{
+  max-height: 50px;
+}
 /* Underline for nav on right of large screens */
 .underline{
   height: 2px;
@@ -163,10 +171,6 @@ height: 100%;
 width: 44%;
 height: 100%;
 background: radial-gradient(white, white, #282c34 70%)
-}
-.navbar-right{
-  width: 45%;
-    padding-right: min(15px);
 }
 }
 
