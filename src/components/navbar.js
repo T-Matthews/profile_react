@@ -31,17 +31,17 @@ let Navbar = () =>{
         <>
             <div className="navbar">
                 <div className="navbar-left">
-                    <a className="nav-item nav-item-l" id="nav-name" href="/">Tyler Matthews</a>
+                    <Link className="nav-item nav-item-l" id="nav-name" to="/">Tyler Matthews</Link>
                     <div className="nav-toggle" id="navToggle">
                         {navIcon}
                     </div>
                 </div>
                 <nav className={`navbar-right-${navstyle}`}>
                     <ul className='navbar-right-list' >
-                        <a className="nav-item nav-item-r" id="nav-projects" href="/projects">Projects</a>
-                        <a className="nav-item nav-item-r" id="nav-previous" href="/previous">Previous Work</a>
-                        <a className="nav-item nav-item-r" id="nav-hobbies" href="/hobbies">Hobbies</a>
-                        <a className="nav-item nav-item-r" id="nav-contact" href="/contact">Contact</a>
+                        <Link className="nav-item nav-item-r" id="nav-projects" to="/projects">Projects</Link>
+                        <Link className="nav-item nav-item-r" id="nav-previous" to="/previous">Previous Work</Link>
+                        <Link className="nav-item nav-item-r" id="nav-hobbies" to="/hobbies">Hobbies</Link>
+                        <Link className="nav-item nav-item-r" id="nav-contact" to="/contact">Contact</Link>
                     </ul>
                 </nav>
             </div>
