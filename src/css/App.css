@@ -290,8 +290,6 @@ background: radial-gradient(white, white, #282c34 70%)
 
 .links{
   margin-top: 6vh;
-
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -313,7 +311,7 @@ background: radial-gradient(white, white, #282c34 70%)
   margin-right:4vh;
 
   max-height: 60%;
-  height:20vw;
+  height:180px
   ;
 }
 .links-underline{
