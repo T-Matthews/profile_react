@@ -1,8 +1,11 @@
+#root, html, body { 
+  height:100%;
+  width: 100%; 
+  background-color: #282c34;}
 .App {
   text-align: center;
-  background-color: #282c34;
-  height: 100vh;
-  width: auto;
+  height: 100%;
+  width: 100%;
   color: rgb(186, 186, 186);
   padding:0;
 }
@@ -54,8 +57,9 @@ width: 35%;
 .navicon{
   visibility: hidden;
 }
-
+/* ///////////////////////////////////// */
 /* Individual underline effect in navbar */
+/* ///////////////////////////////////// */
 .nav-item-r{
   margin: 0 2vw;
   padding: 0; /*bottom padding =space betweent text and underline*/
@@ -177,54 +181,63 @@ background: radial-gradient(white, white, #282c34 70%)
 /* ////// */
 /* BANNER */
 /* ////// */
-
+.banner-space{
+  height: 5vw;
+  width:100%
+}
 #banner{
-  width: 100%;
-  height: auto;
   display: flex;
-  flex-direction: row;
-  padding-left:10vh;
-  padding-right:10vh;
-  margin-bottom: 8vh;
-}
+  align-items: center;
+  justify-content: space-around;
+  min-height: 200px;
+
+  }
 .banner-text-area{
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  
+  width: 60%;
+  height: auto;
+  min-height: 200px;
+  margin: 0 4vh;
 }
-.banner-text-blank{
-  height: 6.5vw;
-}
-.banner-text-space{
-  border: rgb(225, 225, 225) ridge 3px;
-  height: 100%;
-  border-radius: 5vh;
-  border-spacing: 3vh;
+.banner-image{
+
+  background-image: url("../static/bannerbackground.png");
+  background-repeat: no-repeat;
+  background-size:100% 125%;
+  padding: 8vh 10vh;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
 }
 .banner-text{
+  border: rgb(225, 225, 225) ridge 3px;
+  height: 200px;
+  border-radius: 5vh;
+  border-spacing: 3vh;
+  margin: 0 auto 0 auto;
+  width: auto;
+  overflow: hidden;
+
+}
+.banner-text-p{
   overflow: hidden;
   color: rgb(225, 225, 225);
   padding-left: 2vh;
   padding-right: 2vh;
-  font-size: 1.2vw;
-}
-
-.banner-image{
-  margin-right: 2vh;
-  background-image: url("../static/bannerbackground.png");
-  background-repeat: no-repeat;
-  background-size:100% 125%;
-  height: auto;
-  width: 50%;
+  font-size: 15px;
 }
 
 #profile-pic{
-  margin-top: 5vw;
   border: white solid 3px;
-  height: auto;
-  width: 60%;
+  position: relative;
+  top: 45px;
+  
   border-radius: 5vh;
+  display: block;
+  height: 15vw;
+  margin: 0 auto 2rem auto;
+  min-height: 200px;
+
 }
 
 .underline-center{
@@ -234,31 +247,60 @@ background: radial-gradient(white, white, #282c34 70%)
   background-position: center;
   padding-left: 17.5%;
 }
+@media all and (max-width: 1034px) {
+  #banner{
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .banner-text-area{
+    height: auto;
+    max-height: 100%;
+    width: 80%;
+  }
+  .banner-text{
+    height: auto;
+    max-height: 100%;
+    margin-top: 3vh;
+  }
+
+}
+@media all and (max-width: 440px) {
+#profile-pic{
+
+  height: 45vw;
+  margin: 0 auto 2rem auto;
+  min-height: 0;
+  
+  }
+  .banner-image{
+    background-size:100% 125%;
+    padding: 8vh 10vh;
+    position: inherit;
+    display: inline-block;
+    overflow: hidden;
+  
+  }
+}
+
 
 /* /////// */
 /*  LINKS  */
 /* /////// */
 
 .links{
-  margin-top: 5vh;
-  margin-bottom: 3vh;
-  height: 20vh;
+  margin-top: 6vh;
+
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: space-between;
   
 }
-.links-margin{
-  max-width: 20vh;
-  min-width: 3vh;
-  width: auto;
 
-}
 .links-area{
-  max-width: 600px;
-  width: 22%;
-  min-width: 400px;
+  max-width: 800px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -266,9 +308,13 @@ background: radial-gradient(white, white, #282c34 70%)
 }
 
 .link-image{
-  margin-top: 10%;
-  max-height: 80%;
+  margin-top: 2vh;
+  margin-left:4vh;
+  margin-right:4vh;
+
+  max-height: 60%;
   height:20vw;
+  ;
 }
 .links-underline{
   height: 2px;
@@ -276,4 +322,23 @@ background: radial-gradient(white, white, #282c34 70%)
   background-position: center;
   margin-left: 30vw;
   margin-right:30vw;
+  margin-bottom: 3vh;
+}
+.bottom-filler{
+  width: 100%;
+  height:10px;
+}
+@media all and (max-width: 720px) {
+.links-area{
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+}
+.link-image{
+  height:160px;
+  margin:0;
+  padding:0;
+
+}
 }

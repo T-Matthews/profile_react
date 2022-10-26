@@ -8,7 +8,6 @@ let Links = () =>{
     return (
         <>
             <div className="links">
-                    <div className="links-margin-left links-margin"></div>
                     <div className="links-area">
                         <div className="linkedin pro-link">
                             <a href="https://www.linkedin.com/in/tyler-matthews-9b7128140/">
@@ -22,10 +21,11 @@ let Links = () =>{
                         </div>
 
                     </div>
-                    <div className="links-margin-right links-margin"></div>
+
 
             </div>
             <div className="links-underline"/>
+            <div className="bottom-filler"/>
         </>
     )
 }
