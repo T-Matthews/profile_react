@@ -68,7 +68,7 @@ width: 35%;
   position: relative;
 }
 .nav-item:hover{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .nav-item-r::before{
   content: "";
@@ -77,15 +77,41 @@ width: 35%;
   height:2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to left, #9b9b9b, #ffffff 100%);
-  background-color: white;
   visibility: hidden;
   transition: all 0.15s;
-}
+ }
 .nav-item-r:hover::before{
   visibility: visible;
   width: 100%;
 }
+/* ///////////////////////// */
+/* Navbar underline COLORS!! */
+/* ///////////////////////// */
+.nav-color-home::before{
+  background: linear-gradient(to left, #ffffff, rgb(247, 197, 3), 100%);
+  background-color: rgb(247, 197, 3);
+}
+.nav-color-contact::before{
+  background: linear-gradient(to left, #ffffff, rgb(122,219,107), 100%);
+  background-color: rgb(122,219,107);
+}
+.nav-color-hobbies::before{
+  background: linear-gradient(to left, #ffffff, rgb(10, 137, 151), 100%);
+  background-color: rgb(10, 137, 151);
+}
+.nav-color-previous::before{
+  background: linear-gradient(to left, #ffffff, rgb(48, 55, 144), 100%);
+  background-color: rgb(48, 55, 144);
+}
+.nav-color-projects::before{
+  background: linear-gradient(to left, #ffffff, rgb(133, 26, 117), 100%);
+  background-color: rgb(133, 26, 117);
+}
+
+
+
+
+
 
 /*/////////////*/
 /*NAVBAR MOBILE*/
@@ -185,29 +211,43 @@ background: radial-gradient(white, white, #282c34 70%)
   height: 5vw;
   width:100%
 }
-#banner{
+#banner, #contact{
   display: flex;
   align-items: center;
   justify-content: space-around;
   min-height: 200px;
 
   }
-.banner-text-area{
-  width: 60%;
+.banner-text-area, .contact-text-area{
+  
   height: auto;
   min-height: 200px;
   margin: 0 4vh;
 }
-.banner-image{
-
-  background-image: url("../static/bannerbackground.png");
+.banner-text-area{
+  width: 60%;
+}
+.contact-text-area{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  position: relative;
+  top: 90px;
+}
+.banner-image, .contact-image{
   background-repeat: no-repeat;
   background-size:100% 125%;
   padding: 8vh 10vh;
   position: relative;
   display: inline-block;
   overflow: hidden;
-
+}
+.banner-image{
+  background-image: url("../static/bannerbackground.png");
+}
+.contact-image{
+  background-image: url("../static/bannerbackground1.png");
 }
 .banner-text{
   border: rgb(225, 225, 225) ridge 3px;
@@ -219,7 +259,7 @@ background: radial-gradient(white, white, #282c34 70%)
   overflow: hidden;
 
 }
-.banner-text-p{
+.banner-text-p, .contact-text-p{
   overflow: hidden;
   color: rgb(225, 225, 225);
   padding-left: 2vh;
@@ -227,17 +267,24 @@ background: radial-gradient(white, white, #282c34 70%)
   font-size: 15px;
 }
 
-#profile-pic{
+#profile-pic,#contact-pic{
   border: white solid 3px;
   position: relative;
   top: 45px;
   
   border-radius: 5vh;
   display: block;
-  height: 15vw;
+
   margin: 0 auto 2rem auto;
   min-height: 200px;
 
+}
+#profile-pic{
+  height:15vw
+}
+
+#contact-pic{
+  height: 450px;
 }
 
 .underline-center{
@@ -248,32 +295,36 @@ background: radial-gradient(white, white, #282c34 70%)
   padding-left: 17.5%;
 }
 @media all and (max-width: 1034px) {
-  #banner{
+  #banner, #contact{
     flex-direction: column-reverse;
     height: auto;
   }
-
-  .banner-text-area{
+  #contact-pic{height: 400px;}
+  .banner-text-area, #contact-text-area{
     height: auto;
     max-height: 100%;
     width: 80%;
   }
-  .banner-text{
+  .banner-text, .contact-text{
     height: auto;
     max-height: 100%;
     margin-top: 3vh;
   }
+  .contact-text{
+    position: relative;
+    top: -60px;
+  }
 
 }
 @media all and (max-width: 440px) {
-#profile-pic{
-
-  height: 45vw;
+#profile-pic, #contact-pic{
   margin: 0 auto 2rem auto;
   min-height: 0;
-  
+
   }
-  .banner-image{
+  #profile-pic{height: 45vw;} 
+  #contact-pic{height: 75vw;}
+  .banner-image, .contact-image{
     background-size:100% 125%;
     padding: 8vh 10vh;
     position: inherit;
@@ -339,4 +390,19 @@ background: radial-gradient(white, white, #282c34 70%)
   padding:0;
 
 }
+}
+
+
+/* ////////// */
+/* Contact Me */
+/* ////////// */
+
+.email-link{
+  color: rgb(125, 220, 109);
+  text-decoration: none;
+
+}
+.contact-text-content{
+  overflow: wrap;
+  overflow-wrap: break-word;
 }

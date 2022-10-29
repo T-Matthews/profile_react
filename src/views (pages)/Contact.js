@@ -1,12 +1,16 @@
 import React from "react";
+import ContactMe from "../components/contact"
+
+import Navbar from "../components/navbar"
+
 
 
 let Contact = () =>{
 
     return (
         <>
-        <div class='buffer'></div>
-         <h1>This site is still a work in progress. The Contact page is coming soon.</h1>
+            <Navbar/>
+            <ContactMe/>
         </>
     )
 }

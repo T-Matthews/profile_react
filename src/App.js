@@ -1,6 +1,5 @@
 import './css/App.css';
 import React from 'react';
-import Navbar from './components/navbar';
 import Home from './views (pages)/Home';
 import Contact from './views (pages)/Contact';
 import Hobbies from './views (pages)/Hobbies';
@@ -19,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
       <Routes>
         <Route children path='/' element={<Home/>}/>
         <Route children path='/contact' element={<Contact/>}/>

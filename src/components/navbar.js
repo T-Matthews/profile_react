@@ -1,25 +1,32 @@
 
-import { faLessThan } from '@fortawesome/free-solid-svg-icons';
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom'
 
 
 
-
-
-
-
-
 let Navbar = () =>{
+        const[page, setPage] = useState('home');
+        
+
+        const pageChange = (newPage) => {
+            setPage(newPage);
+        }
+    
+    
+    // statehook for minimized/maximized navbar
     const [navstyle,setNavstyle] = useState('closed')
     const changeNavstyle = (input) => {
         setNavstyle(input)
         
         console.log('Swap Icon!')
     }
+    
     let navIcon
     let vertNav
-    if (navstyle == 'closed') {
+
+    
+
+    if (navstyle === 'closed') {
         navIcon = <img onClick={()=>changeNavstyle('open')} id="navClosed" className= 'navicon'
         src="https://www.richardmiddleton.me/wp-content/themes/richardcodes/assets/img/hamburger.svg" alt="hamburger menu"/>
         vertNav='hideVertNav navbar-right-list'
@@ -27,8 +34,8 @@ let Navbar = () =>{
         navIcon = <img onClick={()=>changeNavstyle('closed')} id="navOpen" className='navicon' 
         src="https://www.richardmiddleton.me/wp-content/themes/richardcodes/assets/img/close.svg" alt="close hamburger"/>
         vertNav='VertNav navbar-right-list'
-
     }
+    
 
     return (
         <>
@@ -41,10 +48,10 @@ let Navbar = () =>{
                 </div>
                 <nav className={`navbar-right-${navstyle}`}>
                     <ul className='navbar-right-list' >
-                        <Link className="nav-item nav-item-r" id="nav-projects" to="/projects">Projects</Link>
-                        <Link className="nav-item nav-item-r" id="nav-previous" to="/previous">Previous Work</Link>
-                        <Link className="nav-item nav-item-r" id="nav-hobbies" to="/hobbies">Hobbies</Link>
-                        <Link className="nav-item nav-item-r" id="nav-contact" to="/contact">Contact</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('projects')} id="nav-projects" to="/projects" >Projects</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('previous')} id="nav-previous" to="/previous">Previous Work</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('hobbies')} id="nav-hobbies" to="/hobbies">Hobbies</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('contact')} id="nav-contact" to="/contact">Contact</Link>
                     </ul>
                 </nav>
             </div>
