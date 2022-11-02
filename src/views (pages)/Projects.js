@@ -7,7 +7,7 @@ let Projects = () =>{
     return (
         <>
         <Navbar/>
-        <div class='buffer'></div>
+        <div className='buffer'></div>
          <h1>This site is still a work in progress. The Projects page is coming soon.</h1>
         </>
     )

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 
 let Navbar = () =>{
         const[page, setPage] = useState('home');
-        
 
-        const pageChange = (newPage) => {
-            setPage(newPage);
-        }
+        
+        
+  
+
     
     
     // statehook for minimized/maximized navbar
@@ -20,9 +20,10 @@ let Navbar = () =>{
         
         console.log('Swap Icon!')
     }
-    
-    let navIcon
     let vertNav
+    let navIcon
+
+
 
     
 
@@ -41,17 +42,18 @@ let Navbar = () =>{
         <>
             <div className="navbar">
                 <div className="navbar-left">
-                    <Link className="nav-item nav-item-l" id="nav-name" to="/">Tyler Matthews</Link>
+                    <Link className="nav-item nav-item-l" onClick={()=>setPage('home')} id="nav-name" to="/">Tyler Matthews</Link>
+                    <Link className="nav-item nav-item-l" onClick={()=>setPage('home')} id="nav-name-short" to="/">TM</Link>
                     <div className="nav-toggle" id="navToggle">
                         {navIcon}
                     </div>
                 </div>
                 <nav className={`navbar-right-${navstyle}`}>
                     <ul className='navbar-right-list' >
-                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('projects')} id="nav-projects" to="/projects" >Projects</Link>
-                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('previous')} id="nav-previous" to="/previous">Previous Work</Link>
-                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('hobbies')} id="nav-hobbies" to="/hobbies">Hobbies</Link>
-                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>pageChange('contact')} id="nav-contact" to="/contact">Contact</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>setPage('projects')} id="nav-projects" to="/projects" >Projects</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>setPage('previous')} id="nav-previous" to="/previous">Previous Work</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>setPage('hobbies')} id="nav-hobbies" to="/hobbies">Hobbies</Link>
+                        <Link className={`nav-item nav-item-r nav-color-${page}`}  onClick={()=>setPage('contact')} id="nav-contact" to="/contact">Contact</Link>
                     </ul>
                 </nav>
             </div>
@@ -62,5 +64,6 @@ let Navbar = () =>{
         </>
     )
 }
+
 
 export default Navbar

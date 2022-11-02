@@ -7,7 +7,7 @@ let Previous = () =>{
     return (
         <>
         <Navbar/>
-        <div class='buffer'></div>
+        <div className='buffer'></div>
          <h1>This site is still a work in progress. The Previous Experience page is coming soon.</h1>
         </>
     )

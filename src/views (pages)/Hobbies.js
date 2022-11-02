@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../components/navbar"
+import HobbyComp from "../components/hobbies"
 
 let Hobbies = () =>{
 
     return (
         <>
         <Navbar/>
-        <div class='buffer'></div>
-         <h1>This site is still a work in progress. The Hobbies page is coming soon.</h1>
+        <HobbyComp/>
         </>
     )
 }
