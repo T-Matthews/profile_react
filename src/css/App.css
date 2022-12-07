@@ -226,14 +226,14 @@ background: radial-gradient(white, white, #282c34 70%)
   height: 5vw;
   width:100%
 }
-#banner, #contact{
+#banner, #contact,#previous{
   display: flex;
   align-items: center;
   justify-content: space-around;
   min-height: 200px;
 
   }
-.banner-text-area, .contact-text-area{
+.banner-text-area, .contact-text-area,.previous-text-area{
   
   height: auto;
   min-height: 200px;
@@ -283,7 +283,7 @@ background: radial-gradient(white, white, #282c34 70%)
   font-size: 15px;
 }
 
-#profile-pic,#contact-pic{
+#profile-pic,#contact-pic,#previous-pic{
   border: white solid 3px;
   position: relative;
   top: 45px;
@@ -301,6 +301,9 @@ background: radial-gradient(white, white, #282c34 70%)
 
 #contact-pic{
   height: 450px;
+}
+#previous-pic{
+  height:15vw
 }
 
 .underline-center{
@@ -484,7 +487,7 @@ background: radial-gradient(white, white, #282c34 70%)
   position: relative;
   display: inline-block;
   overflow: hidden;
-  background-image: url("../static/bannerbackground2.png");
+  background-image: url("../static/bannerbackground3.png");
   height:400px;
   width: 550px;
 
@@ -497,6 +500,25 @@ background: radial-gradient(white, white, #282c34 70%)
   top: 0px;
   width: 60%;
 }
+
+/* -------- */
+/* PREVIOUS */
+/* -------- */
+.previous-image{
+  background-repeat: no-repeat;
+  background-size: 550px 500px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background-image: url("../static/bannerbackground2.png");
+  height:400px;
+  width: 550px;
+
+}
+
+
+
+
 @media all and (max-width: 1036px) {
 #hobbies{
   flex-direction: column-reverse;

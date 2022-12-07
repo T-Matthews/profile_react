@@ -6,8 +6,8 @@ let Previouswork = () =>{
 
     return (
         <>
-            <div id='contact'>
-                <div className="contact-text-area">
+            <div id='previous'>
+                <div className="previous-text-area">
                     <div className="contact-text">
                         <h3 className="contact-header">I've done other things!</h3>
                         <h4 className="contact-text-content">Prior to learning to code,
@@ -26,10 +26,8 @@ let Previouswork = () =>{
                         </h4>
                         
                     </div>
-                    <div className='banner-space'/>
-                <div className="underline-center"/>
                 </div>
-                <div className="contact-image">
+                <div className="previous-image">
                     <img className="image" id="contact-pic" src={previous_pic}/>
                 </div>
             </div>
