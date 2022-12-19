@@ -43,9 +43,8 @@ let HobbyComp = () =>{
                             <img className="hobbies-item-pic" id="" src={"https://pbs.twimg.com/media/Fcu7lf3WIAMQWk8?format=jpg&name=small"}/>
                             <h5 className='hobbies-item-text'>
                                 I am mostly playing volleyball these days, but 
-                                would love to get back into soccer, and am excited 
-                                to watch the USMNT in Quatar! I regularly watch 
-                                the English Championship side Swansea City, and 
+                                would love to get back into soccer, and enjoyed watching the world cup!
+                                I regularly watch the English Championship side Swansea City, and 
                                 hope to visit Wales for a game in my lifetime.
                             </h5>
                         </div>
